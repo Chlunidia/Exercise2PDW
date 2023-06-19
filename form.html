@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Membuktikan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey <button id="backButton">Back</button></h1>
+        <section id="form" class="form">
+            <form id="myForm">
+                <label for="name">Your name:</label>
+                <div>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <label for="watchdate">The date you watched Thor: Love and Thunder:</label>
+                <div>
+                    <input type="date" id="watchdate" name="watchdate">
+                </div>
+
+                <label for="rating">The rating you gave:</label>
+                <div>
+                    <select id="rating" name="rating">
+                        <option value="">Rating</option>
+                        <option value="1/10">1/10</option>
+                        <option value="2/10">2/10</option>
+                        <option value="3/10">3/10</option>
+                        <option value="4/10">4/10</option>
+                        <option value="5/10">5/10</option>
+                        <option value="6/20">6/10</option>
+                        <option value="7/10">7/10</option>
+                        <option value="8/10">8/10</option>
+                        <option value="9/20">9/10</option>
+                        <option value="10/10">10/10</option>
+                    </select>
+                </div>
+
+                <label for="watch">Do you want to watch it again?</label>
+                <div class="radio-container">
+                    <input type="radio" id="yes" name="watch" value="Yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="no" name="watch" value="No">
+                    <label for="no">No</label>
+                </div>
+
+                <label for="character">Your favorite character:</label>
+                <div>
+                    <input type="text" id="character" name="character" required>
+                </div>
+
+                <label for="review">Your review about this movie:</label>
+                <div>
+                    <input type="text" id="review" name="review" required>
+                </div>
+
+                <label for="facts">Fun facts about Thor: Love and Thunder:</label>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="thorFact1" name="facts" value="Thor is the God of Thunder">
+                    <label for="thorFact1">Thor is the God of Thunder</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="thorFact2" name="facts" value="Jane Foster becomes Thor">
+                    <label for="thorFact2">Jane Foster becomes Thor</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="thorFact3" name="facts" value="Thor wields the mighty Mjolnir">
+                    <label for="thorFact3">Thor wields the mighty Mjolnir</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="thorFact4" name="facts" value="Loki is Thor's mischievous brother">
+                    <label for="thorFact4">Loki is Thor's mischievous brother</label>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+
+            <div class="custom-alert-overlay" id="customAlertOverlay" style="display: none;">
+                <div class="custom-alert">
+                    <h3>Submitted Data</h3>
+                    <p id="submittedName"></p>
+                    <p id="submittedWatchdate"></p>
+                    <p id="submittedRating"></p>
+                    <p id="submittedWatch"></p>
+                    <p id="submittedCharacter"></p>
+                    <p id="submittedReview"></p>
+                    <p id="submittedFacts"></p>
+                    <button id="closeAlert">Close</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5"></script>
+    <script src="form.js"></script>
+</body>
+
+</html>
